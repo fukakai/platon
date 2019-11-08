@@ -1,0 +1,1 @@
+sqlplus SYSTEM @platon_create_oracle_script.sql

@@ -1,0 +1,34 @@
+
+COMPUTER_USER                                                                   
+--------------------------------------------------------------------------------
+GCOSI\clguigue                                                                  
+
+
+OPERATION_TIME                                                                  
+--------------------                                                            
+08-NOV-2019 10:35:47                                                            
+
+SQL> create user platonBackend identified by platonPassword DEFAULT TABLESPACE users;
+create user platonBackend identified by platonPassword DEFAULT TABLESPACE users
+            *
+ERROR at line 1:
+ORA-01920: user name 'PLATONBACKEND' conflicts with another user or role name 
+
+
+SQL> grant DBA to platonBackend;
+
+Grant succeeded.
+
+SQL> alter session set current_schema = platonBackend;
+
+Session altered.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> /
+
+Commit complete.
+
+SQL> exit
